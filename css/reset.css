@@ -1,0 +1,61 @@
+@charset 'utf-8';
+/* CSS reset */
+html{color:#000;background:#FFF;font-family:'Microsoft YaHei';font-size: 14px;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,form,input,button,textarea,p,th,td,strong{padding:0;margin:0;font-family:'Microsoft YaHei';}
+table{border-collapse:collapse;border-spacing:0;}
+img{border:0;}
+a{text-decoration:none; color:#999; outline:none;}/*此处待添加默认链接颜色*/
+a:hover{color: #000;}
+var,em,strong{font-style:normal;}
+em,strong,th,var{font-style:inherit;font-weight:inherit;}
+li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4{font-size:100%;font-weight:normal;}
+input,button,textarea,select,option{font-family:inherit; font-size:inherit;font-style:inherit;font-weight:inherit;}
+input,button,textarea,select{*font-size:100%;}
+.clearfix:after {content:"\200B"; display:block; height:0; clear:both; }
+.clearfix { *zoom:1; }
+.music-change {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	width: 150px;
+	height: 40px;
+	border-radius: 5px;
+	background: url(../images/bg35.png) no-repeat;
+	background-size: 100%;
+	color: #805;
+	font-size: 20px;
+	line-height: 40px;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.1s ease-in;
+}
+.music-change:hover {
+	background: url(../images/bg35.png) 0 -40px no-repeat;
+	background-size: 100%;
+}
+.music-change:active {
+	background: url(../images/bg36.png) no-repeat;
+	background-size: 100%;
+	font-weight: bold;
+	/*color: blue;*/
+}
+.btn {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 40px;
+	height: 40px;
+	background: url(../images/backicon1.png) no-repeat;
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+.btn a {
+	float: left;
+	width: 100%;
+	height: 100%;
+	text-decoration:none;
+	-webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+

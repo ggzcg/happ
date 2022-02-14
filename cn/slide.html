@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Happy Today</title>
+        <link rel="shortcut icon" href="../images/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="../css/reset.css?v=2">
+        <link rel="stylesheet" type="text/css" href="../css/slide.css">
+        <link rel="stylesheet" href="../css/normalize.css">
+        <script type="text/javascript" src="../js/jquery-1.12.3.min.js?v=1"></script>
+        <script type="text/javascript" src="../js/slide.js"></script>
+    </head>
+    <body>
+		<div class="wrap">
+			<div class="btn"><a href="./main-index.html"></a></div>
+			<div id="music-change" class="musics">
+				<img src="../images/music_bg.jpg" alt="">
+			</div>
+			<div class="pic-show clearfix" id="picShow">
+				<div class="show">
+					<p>这是一个寄语</p>
+					<p>记录以后想对你说的</p>
+					<p>点点滴滴</p>
+				</div>
+				<!-- <div>
+					<p>这天，我幻想自己擦亮了神灯</p>
+					<p>而后灯神问我要什么愿望？</p>
+					<p>我想：今天是一个特殊的日子</p>
+				</div>
+				<div>
+					<p>想让灯神保佑一个正在看这段话的人</p>
+					<p>希望那人生日快乐^_^</p>
+					<p>永远幸福！！那人当然是你</p>
+				</div>
+				<div>
+					<p>你很忙</p>
+					<p>可能周末或假期都在工作</p>
+					<p>希望你多抽写时间好好对自己</p>
+				</div>
+				<div>
+					<p>你说自己很凶</p>
+					<p>你以为这样就能吓退对你的祝福吗</p>
+					<p>不能，活该你365天都快乐</p>
+				</div>
+				<div>
+					<p>你可能还未实现梦想</p>
+					<p>所以会累、会受伤</p>
+					<p>希望你不会迷茫</p>
+				</div>
+				<div>
+					<p>你胆子很大</p>
+					<p>会保护身边的人</p>
+					<p>也望你保护好自己</p>
+				</div>
+				<div>
+					<p>你爱笑</p>
+					<p>只要有好吃的</p>
+					<p>就乐得像个孩子</p>
+				</div>
+				<div>
+					<p>你正逐渐成熟</p>
+					<p>可能你会忘了身边的人和事</p>
+					<p>但希望你能保持初衷</p>
+				</div>
+				<div class="end">
+					<p>你是一位很好的女孩，</p>
+					<p>愿你有美好未来，</p>
+					<p>我不善表达。</p>
+					<p>可今天我想说："佳佳，生日快乐!!"</p>
+				</div> -->
+			</div>
+			<canvas class="canvas"></canvas>
+			
+			<div class="help">?</div> 
+			
+			<div class="ui">
+				<input class="ui-input" type="text" />
+				<span class="ui-return">↵</span>
+			</div>
+			
+			<div class="overlay">
+				<div class="tabs">
+					<div class="tabs-labels">
+						<span class="tabs-label">Commands</span>
+						<span class="tabs-label">Info</span>
+						<span class="tabs-label">Share</span>
+					</div>
+				
+					<div class="tabs-panels">
+						<ul class="tabs-panel commands">
+						<li class="commands-item">
+							<span class="commands-item-title">Text</span>
+							<span class="commands-item-info" data-demo="Hello :)">Type anything</span>
+							<span class="commands-item-action">Demo</span>
+						</li>
+						<li class="commands-item">
+							<span class="commands-item-title">Countdown</span>
+							<span class="commands-item-info" data-demo="#countdown 10">
+							#countdown<span class="commands-item-mode">number</span>
+							</span>
+							<span class="commands-item-action">Demo</span>
+						</li>
+						<li class="commands-item">
+							<span class="commands-item-title">Time</span>
+							<span class="commands-item-info" data-demo="#time">#time</span>
+							<span class="commands-item-action">Demo</span>
+						</li>
+						<li class="commands-item">
+							<span class="commands-item-title">Rectangle</span>
+							<span class="commands-item-info" data-demo="#rectangle 30x15">
+							#rectangle<span class="commands-item-mode">width x height</span>
+							</span>
+							<span class="commands-item-action">Demo</span>
+						</li>
+						<li class="commands-item">
+							<span class="commands-item-title">Circle</span>
+							<span class="commands-item-info" data-demo="#circle 25">
+							#circle<span class="commands-item-mode">diameter</span>
+							</span>
+							<span class="commands-item-action">Demo</span>
+						</li>
+				
+						<li class="commands-item commands-item--gap">
+							<span class="commands-item-title">Animate</span>
+							<span class="commands-item-info" data-demo="The time is|#time|#countdown 3|#icon thumbs-up">
+							<span class="commands-item-mode">command1</span>&nbsp;|<span class="commands-item-mode">command2</span>
+							</span>
+							<span class="commands-item-action">Demo</span>
+						</li>
+						</ul>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<audio id='audio' autoplay="autoplay" loop="loop" src="../mp3/2.mp3"></audio>
+        <script type="text/javascript" src="../js/animate.js"></script> 
+    </body>
+</html>

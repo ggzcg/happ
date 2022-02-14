@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Happy Today</title>
+	<link rel="shortcut icon" href="../images/favicon.ico">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<script type="text/javascript" src="../js/jquery-1.12.3.min.js?v=2"></script>
+	<script>
+		function browserRedirect() {
+			var sUserAgent = navigator.userAgent.toLowerCase();
+			if (/ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile/.test(sUserAgent)) {
+				document.write('<link rel="stylesheet" href="../css/index_narrow.css">')
+			} else {
+			}
+		}
+		browserRedirect(); 
+	</script>
+</head>
+<body>
+	<div class="wrap-out">
+		<div class="wrap-bother"></div>
+		<div class="wrap-bother" style="display: none;"></div>
+		<div class="wrap-bother" style="display: none;"></div>
+		<div class="wrap-bother" style="display: none;"></div>
+		<div class="wrap-bother" style="display: none;"></div>
+		<div class="wrap">
+			<audio id='audio' autoplay="autoplay" loop="loop" src="../mp3/3.mp3"></audio>
+			<div class="box" id="box">
+				<div id="music-change" class="musics">
+					<img src="../images/music_bg.jpg" alt="">
+				</div>
+				<!-- <a class="textss" href="birthdayCake.html" >
+					<span>蛋糕</span>
+					<span></span>
+				</a>
+				<a class="textss" href="slide.html">
+					<span>寄语</span>
+					<span></span>
+				</a> -->
+			</div>
+		</div>
+	</div>
+</body>
+<script src="../js/index.js?v=2"></script>
+</html>

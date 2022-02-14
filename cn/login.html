@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Today happy</title>
+	<link rel="stylesheet" href="../css/reset.css?v=1"/>
+	<script type="text/javascript" src="../js/jquery-1.12.3.min.js"></script>
+	<link rel="stylesheet" href="../css/login.css?v=2">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="container">
+			<h1 href="main-index.html" class="login"><b>Today happy</b></h1>
+			<form class="form">
+				<input id="userName" name="userName" type="text" placeholder="姓名">
+				<input id="pwd" name="pwd" type="password" placeholder="密码">
+				<button type="submit" id="login-button">Enter</button>
+				<p class="tips">佩戴耳塞效果好些，电脑手机均兼容</p>
+			</form>
+		</div>
+	</div>
+	<img src="../images/bubble1.png" style="display: none;" alt="">
+	<img src="../images/bublle05.jpg" style="display: none;" alt="">
+	<script>
+		$(function(){
+			$('.wrap').height($(window).height() - 50);
+			// $('.login').hover(function(){
+			// 	$('.login').html("");
+			// },function(){
+			// 	$('.login').text("Happy Father's Day");
+			// })
+		})
+		var userName = sessionStorage.getItem('users');
+		var pwd = sessionStorage.getItem('pwd');
+		if(userName === 'lyy' && pwd === '0214') {
+			$('form').fadeOut(500);
+			$('.wrapper').addClass('form-success');
+			requestFullScreen();
+			$('.wrapper').fadeOut(1000)
+			setTimeout(function(){
+				location.href="main-index.html";
+			},1000);
+		} else {
+			$('#login-button').click(function (event) {
+				var userName=document.getElementById("userName").value;
+				var pwd=document.getElementById("pwd").value; 
+					//修改密码请改此处
+				if(userName=="lyy" &&  pwd=="0214"){
+					sessionStorage.setItem('users', userName)
+					sessionStorage.setItem('pwd', pwd)
+					event.preventDefault();
+					$('form').fadeOut(500);
+					$('.wrapper').addClass('form-success');
+					requestFullScreen();
+					$('.wrapper').fadeOut(1000)
+					setTimeout(function(){
+						location.href="main-index.html";
+					},1000);
+				}
+				else{
+					alert("Wrong Password");
+				}
+			});
+		}
+
+		function requestFullScreen(element) {
+			var element=document.documentElement;
+			var requestMethod = element.requestFullScreen || //W3C
+			element.webkitRequestFullScreen || //Chrome等
+			element.mozRequestFullScreen || //FireFox
+			element.msRequestFullScreen; //IE11
+			if (requestMethod) {
+				requestMethod.call(element);
+			}
+			else if (typeof window.ActiveXObject !== "undefined") {//for Internet Explorer
+				var wscript = new ActiveXObject("WScript.Shell");
+				if (wscript !== null) {
+				wscript.SendKeys("{F11}");
+				}
+			}
+		}
+	</script>
+</body>
+</html>
