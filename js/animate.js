@@ -24,7 +24,7 @@ var S = {
       if (i !== -1) {
         S.UI.simulate(decodeURI(action).substring(i + 3));
       } else {
-        S.UI.simulate('#rectangle|#countdown 3|映缘|情人节快乐||');
+        S.UI.simulate('#rectangle|#countdown 3|映缘|天天快乐||');
         // S.UI.simulate('#command1||');
       }
   
