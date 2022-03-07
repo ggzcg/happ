@@ -91,9 +91,12 @@ $(function(){
 		this.box.style.left = this.run + 'px';
 		this.box.style.top = this.run2 + 'px';
 	}
-	for(var i = 0; i < 4; i++) {
-		$('.box').append('<a href="javascript:void(0);"><span>再找找</span><span></span></a>');
-	}
+	// for(var i = 0; i < 4; i++) {
+		$('.box').append('<a href="javascript:void(0);"><span>刘小仙</span><span></span></a>');
+		$('.box').append('<a href="javascript:void(0);"><span>刘猪头</span><span></span></a>');
+		$('.box').append('<a href="javascript:void(0);"><span>缘猪猪</span><span></span></a>');
+		$('.box').append('<a href="javascript:void(0);"><span>刘小仙</span><span></span></a>');
+	// }
 	var box = document.getElementById('box');
 	var cons = box.getElementsByTagName('a');
 	for (var i = 0; i < cons.length; i++) {

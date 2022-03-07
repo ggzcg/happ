@@ -24,7 +24,7 @@ var S = {
       if (i !== -1) {
         S.UI.simulate(decodeURI(action).substring(i + 3));
       } else {
-        S.UI.simulate('#rectangle|#countdown 3|映缘|天天快乐||');
+        S.UI.simulate('#rectangle|#countdown 3|映缘|这个三月|你最美|');
         // S.UI.simulate('#command1||');
       }
   
@@ -73,11 +73,11 @@ var S = {
             $('#picShow div').eq(i).children('p').eq(1).delay(5000).slideDown(2500);
             $('#picShow div').eq(i).children('p').eq(2).delay(7500).slideDown(2500);
         }
-        // if (i == 5) {
-        //     $('#picShow div').eq(i).children('p').eq(0).delay(2500).fadeIn(2500);
-        //     $('#picShow div').eq(i).children('p').eq(1).delay(5000).fadeIn(2500);
-        //     $('#picShow div').eq(i).children('p').eq(2).delay(7500).fadeIn(2500);
-        // }
+        if (i == 5) {
+            $('#picShow div').eq(i).children('p').eq(0).delay(2500).fadeIn(2500);
+            $('#picShow div').eq(i).children('p').eq(1).delay(5000).fadeIn(2500);
+            $('#picShow div').eq(i).children('p').eq(2).delay(7500).fadeIn(2500);
+        }
         // if (i == 6) {
         //     $('#picShow div').eq(i).children('p').eq(0).delay(2500).slideDown(2500);
         //     $('#picShow div').eq(i).children('p').eq(1).delay(5000).slideDown(2500);
@@ -106,7 +106,7 @@ var S = {
         //     $('#picShow div').eq(i).children('p').eq(3).delay(10000).fadeIn(2500);
         // }
         i = i + 1;
-        timer = setInterval(showFade, 10000);
+        timer = setInterval(showFade, 15000);
     }
   S.Drawing = (function () {
     var canvas,
