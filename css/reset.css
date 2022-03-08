@@ -30,6 +30,7 @@ input,button,textarea,select{*font-size:100%;}
 	text-align: center;
 	cursor: pointer;
 	transition: all 0.1s ease-in;
+	cursor: pointer;
 }
 .music-change:hover {
 	background: url(../images/bg35.png) 0 -40px no-repeat;
