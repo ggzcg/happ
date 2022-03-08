@@ -93,6 +93,7 @@ a,button,input{-webkit-tap-highlight-color:rgba(255,0,0,0);}
     width: 55px;
     height: 55px;
     z-index: 1;
+	cursor: pointer;
 }
 .musics::after {
     position: absolute;
