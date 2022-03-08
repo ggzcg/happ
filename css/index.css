@@ -16,19 +16,19 @@
 	}
 }
 .wrap-out .wrap-bother:nth-child(1) {
-	background: url(../images/bublle05.jpg) no-repeat;
+	background: url(../images/bublle06.jpg) no-repeat;
 	background-size: cover;
 }
 .wrap-out .wrap-bother:nth-child(2) {
-	background: url(../images/bublle02.jpg) no-repeat;
-	background-size: cover;
-}
-.wrap-out .wrap-bother:nth-child(3) {
 	background: url(../images/bublle03.jpg) no-repeat;
 	background-size: cover;
 }
-.wrap-out .wrap-bother:nth-child(4) {
+.wrap-out .wrap-bother:nth-child(3) {
 	background: url(../images/bublle04.jpg) no-repeat;
+	background-size: cover;
+}
+.wrap-out .wrap-bother:nth-child(4) {
+	background: url(../images/bublle05.jpg) no-repeat;
 	background-size: cover;
 }
 .wrap-out .wrap-bother:nth-child(5) {
