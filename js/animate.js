@@ -24,7 +24,7 @@ var S = {
       if (i !== -1) {
         S.UI.simulate(decodeURI(action).substring(i + 3));
       } else {
-        S.UI.simulate('#rectangle|#countdown 3|映缘|这个三月|你最美|');
+        S.UI.simulate('#rectangle|#countdown 3|刘小猪|每天都是|你最美|');
         // S.UI.simulate('#command1||');
       }
   
