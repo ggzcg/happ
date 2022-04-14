@@ -78,11 +78,11 @@ var S = {
             $('#picShow div').eq(i).children('p').eq(1).delay(5000).fadeIn(2500);
             $('#picShow div').eq(i).children('p').eq(2).delay(7500).fadeIn(2500);
         }
-        // if (i == 6) {
-        //     $('#picShow div').eq(i).children('p').eq(0).delay(2500).slideDown(2500);
-        //     $('#picShow div').eq(i).children('p').eq(1).delay(5000).slideDown(2500);
-        //     $('#picShow div').eq(i).children('p').eq(2).delay(7500).slideDown(2500);
-        // }
+        if (i == 6) {
+            $('#picShow div').eq(i).children('p').eq(0).delay(2500).slideDown(2500);
+            $('#picShow div').eq(i).children('p').eq(1).delay(5000).slideDown(2500);
+            $('#picShow div').eq(i).children('p').eq(2).delay(7500).slideDown(2500);
+        }
         // if (i == 7) {
         //     $('#picShow div').eq(i).children('p').eq(0).delay(2500).animate({
         //         width : '100%'
