@@ -1,88 +1,63 @@
 .wrap {
     /* margin: 0px 50px 0; */
 }
-.musics {
-    position: fixed;
-    top: 25px;
-    right: 10px;
-    width: 55px;
-    height: 55px;
-    z-index: 1;
-}
-.musics::after {
-    position: absolute;
-    content: "";
-    left: 25px;
-    top: -24px;
-    width: 30px;
-    height: 48px;
-    background-image: url(../images/needle-ab.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-}
-.musics img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    overflow: hidden;
-    animation: rotate_ani 9S infinite linear;
-}
-@keyframes rotate_ani{
-    0% {
-        transform: rotate(0deg)
-    }
-    100% {
-        transform: rotate(360deg)
-    }
-}
+
+
 .pic-show {
+  display: none;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%,-50%);
     overflow:hidden;
-    width: 100%;
+    /* width: 100%; */
     height: 200px;
     margin: 0 auto;
 }
 .pic-show div {
-    display: none;
-    position: absolute;
+    /* display: none; */
+    /* position: absolute;
     left: 0;
     top: 0;
     float:left;
     width: 100%;
-    height: 680px;
-    /* box-shadow: inset 0px -25px 15px 55px #fff; */
+    height: 680px; */
 }
-.pic-show .show {
+/* .pic-show .show {
     display: block;
-}
+} */
 /* .pic-show div:nth-child(1) {
     background: url(../images/fqj9.png) no-repeat;
     background-size: 100% 100%;
 
 } */
-.pic-show div:nth-child(1) p {
+/* .pic-show div:nth-child(1) p {
     display: block;
     overflow: hidden;
     white-space: nowrap;
     width: 0;
-}
-.pic-show div:nth-child(8) p {
+} */
+/* .pic-show div:nth-child(8) p {
     display: block;
     overflow: hidden;
     white-space: nowrap;
     width: 0;
-}
-.pic-show div p {
-    display: none;
-    /* white-space: nowrap; */
+} */
+.pic-show .items p {
+    /* display: none; */
     line-height: 40px;
     font-family: 'YouYuan';
     font-size: 22px;
     font-weight: bold;
     color: #7d3713;
     text-align: center;
+}
+.pic-show .items {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  cursor: pointer;
 }
 /* .end p:nth-child(2) {
     left: 110px;
@@ -425,5 +400,16 @@ body {
   
   .touch .ui-input {
     display: none;
+  }
+
+  /* swiper */
+  .swiper-container {
+    width: 1200px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .swiper-slide {
+    position: relative;
+    /* background-color: rgba(0, 0, 0, 0); */
   }
   

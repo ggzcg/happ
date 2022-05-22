@@ -38,65 +38,78 @@ var S = {
     var len = divs.length;
     var timer = null;   
     S.showtests = function showFade() {
-        if (timer) {
-            clearInterval(timer);
-        };
-        $('#picShow div').eq(i).fadeIn(2500).siblings().fadeOut(1000);
-        if (i == 0) {
-            $('#picShow div').eq(i).children('p').eq(0).delay(2500).animate({
-                width : '100%'
-            },2500);
-            $('#picShow div').eq(i).children('p').eq(1).delay(5000).animate({
-                width : '100%'
-            },2500);
-            $('#picShow div').eq(i).children('p').eq(2).delay(7500).animate({
-                width : '100%'
-            },2500);
-            $('#picShow div').eq(i).children('p').eq(3).delay(10000).animate({
-                width : '100%'
-            },2500);
-        }
-        if (i == 1) {
-            $('#picShow div').eq(i).children('p').eq(0).delay(2500).fadeIn(2500);
-            $('#picShow div').eq(i).children('p').eq(1).delay(5000).fadeIn(2500);
-            $('#picShow div').eq(i).children('p').eq(2).delay(7500).fadeIn(2500);
-        }
-        if (i == 2) {
-            $('#picShow div').eq(i).children('p').eq(0).delay(2500).slideDown(2500);
-            $('#picShow div').eq(i).children('p').eq(1).delay(5000).slideDown(2500);
-            $('#picShow div').eq(i).children('p').eq(2).delay(7500).slideDown(2500);
-        }
-        if (i == 3) {
-            $('#picShow div').eq(i).children('p').eq(0).delay(2500).show(2500);
-            $('#picShow div').eq(i).children('p').eq(1).delay(5000).show(2500);
-            $('#picShow div').eq(i).children('p').eq(2).delay(7500).show(2500);
-        }
-        if (i == 4) {
-            $('#picShow div').eq(i).children('p').eq(0).delay(2500).slideDown(2500);
-            $('#picShow div').eq(i).children('p').eq(1).delay(5000).slideDown(2500);
-            $('#picShow div').eq(i).children('p').eq(2).delay(7500).slideDown(2500);
-        }
-        if (i == 5) {
-            $('#picShow div').eq(i).children('p').eq(0).delay(2500).fadeIn(2500);
-            $('#picShow div').eq(i).children('p').eq(1).delay(5000).fadeIn(2500);
-            $('#picShow div').eq(i).children('p').eq(2).delay(7500).fadeIn(2500);
-        }
-        if (i == 6) {
-            $('#picShow div').eq(i).children('p').eq(0).delay(2500).slideDown(2500);
-            $('#picShow div').eq(i).children('p').eq(1).delay(5000).slideDown(2500);
-            $('#picShow div').eq(i).children('p').eq(2).delay(7500).slideDown(2500);
-        }
-        if (i == 7) {
-            $('#picShow div').eq(i).children('p').eq(0).delay(2500).animate({
-                width : '100%'
-            },2500);
-            $('#picShow div').eq(i).children('p').eq(1).delay(5000).animate({
-                width : '100%'
-            },2500);
-            $('#picShow div').eq(i).children('p').eq(2).delay(7500).animate({
-                width : '100%'
-            },2500);
-        }
+      $('#picShow').show()
+      new Swiper('.swiper-container',{
+				direction: "vertical",
+				speed: 1300,
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+          swiperAnimateCache(swiper); //隐藏动画元素 
+          swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function(swiper){ 
+          swiperAnimate(swiper); 
+       },
+			})
+        // if (timer) {
+        //     clearInterval(timer);
+        // };
+        // $('#picShow div').eq(i).fadeIn(2500).siblings().fadeOut(1000);
+        // if (i == 0) {
+        //     $('#picShow div').eq(i).children('p').eq(0).delay(2500).animate({
+        //         width : '100%'
+        //     },2500);
+        //     $('#picShow div').eq(i).children('p').eq(1).delay(5000).animate({
+        //         width : '100%'
+        //     },2500);
+        //     $('#picShow div').eq(i).children('p').eq(2).delay(7500).animate({
+        //         width : '100%'
+        //     },2500);
+        //     $('#picShow div').eq(i).children('p').eq(3).delay(10000).animate({
+        //         width : '100%'
+        //     },2500);
+        // }
+        // if (i == 1) {
+        //     $('#picShow div').eq(i).children('p').eq(0).delay(2500).fadeIn(2500);
+        //     $('#picShow div').eq(i).children('p').eq(1).delay(5000).fadeIn(2500);
+        //     $('#picShow div').eq(i).children('p').eq(2).delay(7500).fadeIn(2500);
+        // }
+        // if (i == 2) {
+        //     $('#picShow div').eq(i).children('p').eq(0).delay(2500).slideDown(2500);
+        //     $('#picShow div').eq(i).children('p').eq(1).delay(5000).slideDown(2500);
+        //     $('#picShow div').eq(i).children('p').eq(2).delay(7500).slideDown(2500);
+        // }
+        // if (i == 3) {
+        //     $('#picShow div').eq(i).children('p').eq(0).delay(2500).show(2500);
+        //     $('#picShow div').eq(i).children('p').eq(1).delay(5000).show(2500);
+        //     $('#picShow div').eq(i).children('p').eq(2).delay(7500).show(2500);
+        // }
+        // if (i == 4) {
+        //     $('#picShow div').eq(i).children('p').eq(0).delay(2500).slideDown(2500);
+        //     $('#picShow div').eq(i).children('p').eq(1).delay(5000).slideDown(2500);
+        //     $('#picShow div').eq(i).children('p').eq(2).delay(7500).slideDown(2500);
+        // }
+        // if (i == 5) {
+        //     $('#picShow div').eq(i).children('p').eq(0).delay(2500).fadeIn(2500);
+        //     $('#picShow div').eq(i).children('p').eq(1).delay(5000).fadeIn(2500);
+        //     $('#picShow div').eq(i).children('p').eq(2).delay(7500).fadeIn(2500);
+        // }
+        // if (i == 6) {
+        //     $('#picShow div').eq(i).children('p').eq(0).delay(2500).slideDown(2500);
+        //     $('#picShow div').eq(i).children('p').eq(1).delay(5000).slideDown(2500);
+        //     $('#picShow div').eq(i).children('p').eq(2).delay(7500).slideDown(2500);
+        // }
+        // if (i == 7) {
+        //     $('#picShow div').eq(i).children('p').eq(0).delay(2500).animate({
+        //         width : '100%'
+        //     },2500);
+        //     $('#picShow div').eq(i).children('p').eq(1).delay(5000).animate({
+        //         width : '100%'
+        //     },2500);
+        //     $('#picShow div').eq(i).children('p').eq(2).delay(7500).animate({
+        //         width : '100%'
+        //     },2500);
+        // }
+
         // if (i == 8) {
         //     $('#picShow div').eq(i).children('p').eq(0).delay(2500).slideDown(2500);
         //     $('#picShow div').eq(i).children('p').eq(1).delay(5000).slideDown(2500);
@@ -108,8 +121,8 @@ var S = {
         //     $('#picShow div').eq(i).children('p').eq(2).delay(7500).fadeIn(2500);
         //     $('#picShow div').eq(i).children('p').eq(3).delay(10000).fadeIn(2500);
         // }
-        i = i + 1;
-        timer = setInterval(showFade, 15000);
+        // i = i + 1;
+        // timer = setTimeout(showFade, 15000);
     }
   S.Drawing = (function () {
     var canvas,
