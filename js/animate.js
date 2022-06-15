@@ -24,7 +24,7 @@ var S = {
       if (i !== -1) {
         S.UI.simulate(decodeURI(action).substring(i + 3));
       } else {
-        S.UI.simulate('#rectangle|#countdown 3|刘小猪|我真的|好想你');
+        S.UI.simulate('#rectangle|#countdown 3|刘小猪|我好想你|');
         // S.UI.simulate('#command1||');
       }
   
